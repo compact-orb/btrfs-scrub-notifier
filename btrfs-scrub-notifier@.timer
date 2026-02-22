@@ -1,0 +1,9 @@
+[Unit]
+Description=Weekly Btrfs scrub on %f with notifications
+
+[Timer]
+OnCalendar=Sun UTC
+Persistent=true
+
+[Install]
+WantedBy=timers.target

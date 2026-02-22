@@ -1,0 +1,13 @@
+[Unit]
+Description=Btrfs scrub on %f with notifications
+# Ensure the mount point exists/is mounted
+RequiresMountsFor=%f
+
+[Service]
+Type=oneshot
+# Systemd replaces %f with the unescaped instance name (e.g. '/' or '/mnt/data')
+ExecStart=/usr/local/bin/btrfs-scrub-notifier.sh %f
+
+# Run with low priority to not impact interactive desktop use
+Nice=19
+IOSchedulingClass=idle
