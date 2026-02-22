@@ -1,5 +1,7 @@
 # btrfs-scrub-notifier
 
+[![CodeFactor](https://www.codefactor.io/repository/github/compact-orb/btrfs-scrub-notifier/badge)](https://www.codefactor.io/repository/github/compact-orb/btrfs-scrub-notifier)
+
 A tool to automate regular Btrfs scrubs and receive immediate desktop notifications if errors are found.
 
 This script interfaces with D-Bus to send a `notify-send` alert to the configured user, even when the scrub is triggered by a background `root` system service.
